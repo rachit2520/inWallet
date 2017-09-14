@@ -7,6 +7,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { File } from '@ionic-native/file';
+import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -24,6 +27,9 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
+    File,
+    FileTransfer,
+    FileTransferObject,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
