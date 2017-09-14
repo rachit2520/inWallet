@@ -15,8 +15,8 @@ export class HomePage {
 
   download() {
     const fileTransfer: FileTransferObject = this.transfer.create();
-    const url = 'https://www.passinwallet.com/1.pkpass';
-    fileTransfer.download(url, this.file.dataDirectory + 'pass.pkpass').then((entry) => {
+    const url = 'https://www.passinwallet.com/pass.zip';
+    fileTransfer.download(url, this.file.dataDirectory + 'pass.zip', true).then((entry) => {
       console.log('download complete: ' + entry.toURL());
     }, (error) => {
       console.log("download error source " + error.source);
